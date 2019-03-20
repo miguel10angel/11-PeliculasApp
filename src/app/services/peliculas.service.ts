@@ -9,6 +9,9 @@ import { map } from 'rxjs/operators';
 
 export class PeliculasService {
 
+  public peliculas: any;
+
+
   private apiKey = '5c3bdaeb02e0c2eef30776ba5552e022';
   private urlMovieDb = 'https://api.themoviedb.org/3/';
 
@@ -40,12 +43,15 @@ export class PeliculasService {
 
   getFilm(id: number) {
     const url = `${this.urlMovieDb}movie/${id}?api_key=${this.apiKey}&language=es&callback=JSONP_CALLBACK`;
-    return this.jsonp.get( url ).pipe( map( res => res.json().results ) );
+    return this.jsonp.get( url ).pipe( map( res => res.json() ) );
   }
 
   getSearch( termino ) {
     // const search = "https://api.themoviedb.org/3/search/movie?api_key=5c3bdaeb02e0c2eef30776ba5552e022&language=es-MX&query=Marbel";
     const url = `${this.urlMovieDb}search/movie?api_key=${this.apiKey}&language=es&query=${termino}&callback=JSONP_CALLBACK`;
-    return this.jsonp.get( url ).pipe( map( data => data.json().results ));
+    return this.jsonp.get( url ).pipe( map( data => {
+      this.peliculas = data.json().results;
+      return data.json().results;
+    } ));
   }
 }

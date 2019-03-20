@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PeliculasService } from 'src/app/services/peliculas.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -11,7 +11,14 @@ export class SearchComponent implements OnInit {
 
   public busqueda = [];
 
-  constructor( private _ps: PeliculasService, private router: Router ) { }
+  public search;
+
+  constructor( public _ps: PeliculasService, private router: Router, private ar: ActivatedRoute ) {
+    this.ar.params.subscribe( params => {
+      this.search = params['termino'];
+      this.getSearch( params['termino'] );
+    });
+  }
 
   ngOnInit() {
   }

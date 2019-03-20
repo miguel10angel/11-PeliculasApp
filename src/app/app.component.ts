@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PeliculasService } from './services/peliculas.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,12 +9,12 @@ import { PeliculasService } from './services/peliculas.service';
 })
 export class AppComponent {
 
-  constructor( public _ps: PeliculasService ) {
+  constructor( private router: Router ) {
     /*this._ps.getPopulares().subscribe( data => console.log(data));*/
   }
   title = 'peliculasapp';
 
   buscar( termino: string ) {
-    console.log(termino);
+    this.router.navigate(['/search', termino]);
   }
 }

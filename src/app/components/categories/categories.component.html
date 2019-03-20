@@ -20,33 +20,33 @@
 
 <div class="padre" *ngIf="cartelera.length > 0">
     <div style="display: inline-block; background-color: black;">
-        <div class="pequena">
+        <div class="pequena" (click)="film( cartelera[0].id )">
             <img class="card-img-top" [src]=" cartelera[0] | noImagen:500">
             <label> {{ cartelera[0].title }}</label>
         </div>
 
-        <div class="pequena">
+        <div class="pequena" (click)="film( cartelera[1].id )">
             <img class="card-img-top" [src]=" cartelera[1] | noImagen:500">
             <label> {{ cartelera[1].title }}</label>
         </div>
 
-        <div class="grande">
+        <div class="grande" (click)="film( cartelera[2].id )">
             <img class="card-img-top" [src]=" cartelera[2] | noImagen:500">
             <label> {{ cartelera[2].title }}</label>
         </div>
     </div>
     <div style="display: inline-block; background-color: black;">
-        <div class="pequena">
+        <div class="pequena" (click)="film( cartelera[3].id )">
             <img class="card-img-top" [src]=" cartelera[3] | noImagen:500">
             <label> {{ cartelera[3].title }}</label>
         </div>
 
-        <div class="pequena">
+        <div class="pequena" (click)="film( cartelera[4].id )">
             <img class="card-img-top" [src]=" cartelera[4] | noImagen:500">
             <label> {{ cartelera[4].title }}</label>
         </div>
 
-        <div class="grande">
+        <div class="grande" (click)="film( cartelera[5].id )">
             <img class="card-img-top" [src]=" cartelera[5] | noImagen:500">
             <label> {{ cartelera[5].title }}</label>
         </div>
@@ -67,33 +67,33 @@
 
 <div class="padre" *ngIf="populares.length > 0">
     <div style="display: inline-block; background-color: black;">
-        <div class="pequena">
+        <div class="pequena" (click)="film( populares[0].id )">
             <img class="card-img-top" [src]=" populares[0] | noImagen:500">
             <label> {{ populares[0].title }}</label>
         </div>
 
-        <div class="pequena">
+        <div class="pequena" (click)="film( populares[1].id )">
             <img class="card-img-top" [src]=" populares[1] | noImagen:500">
             <label> {{ populares[1].title }}</label>
         </div>
 
-        <div class="grande">
+        <div class="grande" (click)="film( populares[2].id )">
             <img class="card-img-top" [src]=" populares[2] | noImagen:500">
             <label> {{ populares[2].title }}</label>
         </div>
     </div>
     <div style="display: inline-block; background-color: black;">
-        <div class="pequena">
+        <div class="pequena" (click)="film( populares[3].id )">
             <img class="card-img-top" [src]=" populares[3] | noImagen:500">
             <label> {{ populares[3].title }}</label>
         </div>
 
-        <div class="pequena">
+        <div class="pequena" (click)="film( populares[4].id )">
             <img class="card-img-top" [src]=" populares[4] | noImagen:500">
             <label> {{ populares[4].title }}</label>
         </div>
 
-        <div class="grande">
+        <div class="grande" (click)="film( populares[5].id )">
             <img class="card-img-top" [src]=" populares[5] | noImagen:500">
             <label> {{ populares[5].title }}</label>
         </div>
@@ -113,33 +113,33 @@
 
 <div class="padre" *ngIf="mejoresPuntuadas.length > 0">
     <div style="display: inline-block; background-color: black;">
-        <div class="pequena">
+        <div class="pequena" (click)="film( mejoresPuntuadas[0].id )">
             <img class="card-img-top" [src]=" mejoresPuntuadas[0] | noImagen:500">
             <label> {{ mejoresPuntuadas[0].title }}</label>
         </div>
 
-        <div class="pequena">
+        <div class="pequena" (click)="film( mejoresPuntuadas[1].id )">
             <img class="card-img-top" [src]=" mejoresPuntuadas[1] | noImagen:500">
             <label> {{ mejoresPuntuadas[1].title }}</label>
         </div>
 
-        <div class="grande">
+        <div class="grande" (click)="film( mejoresPuntuadas[2].id )">
             <img class="card-img-top" [src]=" mejoresPuntuadas[2] | noImagen:500">
             <label> {{ mejoresPuntuadas[2].title }}</label>
         </div>
     </div>
     <div style="display: inline-block; background-color: black;">
-        <div class="pequena">
+        <div class="pequena" (click)="film( mejoresPuntuadas[3].id )">
             <img class="card-img-top" [src]=" mejoresPuntuadas[3] | noImagen:500">
             <label> {{ mejoresPuntuadas[3].title }}</label>
         </div>
 
-        <div class="pequena">
+        <div class="pequena" (click)="film( mejoresPuntuadas[4].id )">
             <img class="card-img-top" [src]=" mejoresPuntuadas[4] | noImagen:500">
             <label> {{ mejoresPuntuadas[4].title }}</label>
         </div>
 
-        <div class="grande">
+        <div class="grande" (click)="film( mejoresPuntuadas[5].id )">
             <img class="card-img-top" [src]=" mejoresPuntuadas[5] | noImagen:500">
             <label> {{ mejoresPuntuadas[5].title }}</label>
         </div>
@@ -159,33 +159,33 @@
 
 <div class="padre" *ngIf="mejoresAnioPasado.length > 0">
     <div style="display: inline-block; background-color: black;">
-        <div class="pequena">
+        <div class="pequena" (click)="film( mejoresAnioPasado[0].id )">
             <img class="card-img-top" [src]=" mejoresAnioPasado[0] | noImagen:500">
             <label> {{ mejoresAnioPasado[0].title }}</label>
         </div>
 
-        <div class="pequena">
+        <div class="pequena" (click)="film( mejoresAnioPasado[1].id )">
             <img class="card-img-top" [src]=" mejoresAnioPasado[1] | noImagen:500">
             <label> {{ mejoresAnioPasado[1].title }}</label>
         </div>
 
-        <div class="grande">
+        <div class="grande" (click)="film( mejoresAnioPasado[2].id )">
             <img class="card-img-top" [src]=" mejoresAnioPasado[2] | noImagen:500">
             <label> {{ mejoresAnioPasado[2].title }}</label>
         </div>
     </div>
     <div style="display: inline-block; background-color: black;">
-        <div class="pequena">
+        <div class="pequena" (click)="film( mejoresAnioPasado[3].id )">
             <img class="card-img-top" [src]=" mejoresAnioPasado[3] | noImagen:500">
             <label> {{ mejoresAnioPasado[3].title }}</label>
         </div>
 
-        <div class="pequena">
+        <div class="pequena" (click)="film( mejoresAnioPasado[4].id )">
             <img class="card-img-top" [src]=" mejoresAnioPasado[4] | noImagen:500">
             <label> {{ mejoresAnioPasado[4].title }}</label>
         </div>
 
-        <div class="grande">
+        <div class="grande" (click)="film( mejoresAnioPasado[5].id )">
             <img class="card-img-top" [src]=" mejoresAnioPasado[5] | noImagen:500">
             <label> {{ mejoresAnioPasado[5].title }}</label>
         </div>

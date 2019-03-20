@@ -6,7 +6,7 @@ import { NabvarComponent } from './components/nabvar/nabvar.component';
 
 const RUTAS: Routes = [
     {
-        path: 'search',
+        path: 'search/:termino',
         component: SearchComponent
     },
     {

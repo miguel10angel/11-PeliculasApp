@@ -22,7 +22,11 @@ export class FilmComponent implements OnInit {
     this._ps.getFilm( this.idFilm ).subscribe( data => {
       this.pelicula = data;
       console.log(data);
-      this.imagen = `http://image.tmdb.org/t/p/w300${data.poster_path}`;
+      if (data.poster_path) {
+        this.imagen = `http://image.tmdb.org/t/p/w300${data.poster_path}`;
+      } else {
+        this.imagen = 'assets/noimage.png';
+      }
     });
   }
 

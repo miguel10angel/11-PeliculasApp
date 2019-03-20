@@ -1,16 +1,21 @@
-<h1>{{ pelicula.title }}</h1>
-<div style="display: inline-block;">
-    <img [src]="imagen" alt="{{ pelicula.title }}">
-</div>
+<div *ngIf="pelicula">
 
-<div style="display: inline-block; width: 30px;"></div>
-<div style="display: inline-block; position: absolute; ">
-    <h5>Sinopsis</h5>
-    <hr style="margin-right: 100px;">
-    <p style="text-align: justify; padding-right: 100px;">{{ pelicula.overview }}</p>
 
-    <hr style="margin-right: 100px;">
-    <p> <strong>Popularidad:</strong> {{ pelicula.popularity }}</p>
-    <p><strong> Voto promedio:</strong> {{ pelicula.vote_average }}/10 </p>
-    <button class="btn btn-outline-success" (click)="goBack()">Regresar</button>
+    <h1>{{ pelicula.title }}</h1>
+    <div style="display: inline-block;">
+        <img [src]="imagen" alt="{{ pelicula.title }}">
+    </div>
+
+    <div style="display: inline-block; width: 30px;"></div>
+    <div style="display: inline-block; position: absolute; ">
+        <h5>Sinopsis</h5>
+        <hr style="margin-right: 100px;">
+        <p style="text-align: justify; padding-right: 100px;" *ngIf="pelicula.overview">{{ pelicula.overview }}</p>
+        <p *ngIf="!pelicula.overview" style="text-align: justify; padding-right: 100px; color:red;"> Sin descripción</p>
+
+        <hr style="margin-right: 100px;">
+        <p> <strong>Popularidad:</strong> {{ pelicula.popularity }}</p>
+        <p><strong> Voto promedio:</strong> {{ pelicula.vote_average }}/10 </p>
+        <button class="btn btn-outline-success" (click)="goBack()">Regresar</button>
+    </div>
 </div>

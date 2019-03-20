@@ -1,12 +1,12 @@
 <div class="input-group mb-3">
-    <input class="form-control" type="text" #termino (keyup)="getSearch(termino.value)">
+    <input class="form-control" type="text" #termino (keyup)="getSearch(termino.value)" [value]="search">
     <div class="input-group-append">
         <button class="btn btn-outline-primary" type="button" (click)="getSearch(termino.value)">Buscar</button>
     </div>
 </div>
 
 <div class="card-columns" *ngIf="busqueda.length > 0 ">
-    <div class="card puntero" *ngFor="let pelicula of busqueda" (click)="getFilm( pelicula.id )">
+    <div class="card puntero" *ngFor="let pelicula of _ps.peliculas" (click)="getFilm( pelicula.id )">
         <h5 class="card-header text-white bg-dark"> {{ pelicula.title}} </h5>
         <img class="card-img-top" [src]=" pelicula | noImagen:500: true" alt="Card image cap">
     </div>
